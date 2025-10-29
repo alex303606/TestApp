@@ -19,7 +19,7 @@ i18n
   .use(languageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ru_RU',
+    fallbackLng: 'en_EN',
     resources,
     // have a common namespace used around the full app
     ns: ['common'],

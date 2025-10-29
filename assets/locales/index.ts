@@ -1,5 +1,3 @@
-import ru_RU from './ru.json'
+import en_EN from './en.json';
 
-export const resources = { ru_RU }
-
-export type LangTypes = keyof typeof resources
+export const resources = { en_EN };
