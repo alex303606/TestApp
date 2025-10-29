@@ -16,6 +16,10 @@
     {
       "path": "assets/fonts/Inter-SemiBold.ttf",
       "sha1": "cc7de5a1b1cbc5617964cdf2717246abc4de37f4"
+    },
+    {
+      "path": "assets/fonts/icomoon.ttf",
+      "sha1": "cd3cbe688057814cc31846387daee09b5e89a0e3"
     }
   ]
 }

@@ -16,6 +16,9 @@
     "baseUrl": "./",
     "paths": {
       "@UIKit": ["src/UIKit/index.ts"],
+      "@screens": ["src/screens/index.ts"],
+      "@navigation": ["src/navigation/index.ts"],
+      "@assets/*": ["assets/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

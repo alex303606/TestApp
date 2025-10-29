@@ -6,13 +6,20 @@
  */
 
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { StyledStatusBar } from '@UIKit';
+import { AppNavigation } from '@navigation';
+import { NavigationContainer } from '@react-navigation/native';
+import I18n from './i18n';
+import { I18nextProvider } from 'react-i18next';
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <StyledStatusBar />
-    </SafeAreaProvider>
+    <I18nextProvider i18n={I18n}>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <AppNavigation />
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </I18nextProvider>
   );
 };
 

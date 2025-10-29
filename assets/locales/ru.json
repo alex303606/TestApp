@@ -1,1 +1,9 @@
-{}
+{
+  "tabs": {
+    "home": "Home",
+    "payments": "Payments",
+    "history": "History",
+    "analytics": "Analytics",
+    "chats": "Chats"
+  }
+}

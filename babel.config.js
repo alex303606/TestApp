@@ -2,11 +2,14 @@ module.exports = {
   presets: ['module:@react-native/babel-preset'],
   plugins: [
     [
-      "module-resolver",
+      'module-resolver',
       {
-        root: ["./src"],
+        root: ['./src'],
         alias: {
-          "@UIKit": "./src/UIKit/index.ts",
+          '@UIKit': './src/UIKit/index.ts',
+          '@screens': './src/screens/index.ts',
+          '@navigation': './src/navigation/index.ts',
+          '^@assets/(.+)': './assets/\\1',
         },
       },
     ],

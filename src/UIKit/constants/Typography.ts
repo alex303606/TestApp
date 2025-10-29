@@ -1,8 +1,8 @@
-import { Text } from "react-native";
-import styled from "styled-components";
+import { Text } from 'react-native';
+import styled from 'styled-components';
 
-import { spacings, SpacingsProps } from "../helpers";
-import { Colors } from "./Colors";
+import { spacings, SpacingsProps } from '../helpers';
+import { Colors } from './Colors';
 
 export interface ColoredTextProps {
   color?: string;
@@ -12,43 +12,27 @@ export interface ColoredTextProps {
 
 const coloredText = styled(Text)<ColoredTextProps & SpacingsProps>`
   color: ${({ color }) => color || Colors.black};
-  text-align: ${({ textAlign }) => textAlign || "left"};
-  ${({ flexShrink }) => (typeof flexShrink === "number" ? `flex-shrink: ${flexShrink}` : "")}
-  ${(props) => spacings(props)}
+  text-align: ${({ textAlign }) => textAlign || 'left'};
+  ${({ flexShrink }) =>
+    typeof flexShrink === 'number' ? `flex-shrink: ${flexShrink}` : ''}
+  ${props => spacings(props)}
 `;
 
-const semiBold = styled(coloredText)`
-  font-family: "Inter-SemiBold";
+const regular = styled(coloredText)`
+  font-family: 'Inter-Regular';
 `;
 
-const medium = styled(coloredText)`
-  font-family: "Inter-Medium";
-`;
+// const bold = styled(coloredText)`
+//   font-family: 'Inter-Bold';
+// `;
 
-const bold = styled(coloredText)`
-  font-family: "Inter-Bold";
-`;
-
-const B14 = styled(bold)`
-  font-size: 14px;
-  line-height: 18px;
-`;
-
-const S14 = styled(semiBold)`
-  font-size: 14px;
-  line-height: 20px;
-`;
-
-const M14 = styled(medium)`
-  font-size: 14px;
-  line-height: 20px;
+const R12 = styled(regular)`
+  font-size: 12px;
+  line-height: 16px;
 `;
 
 export const Typography = {
-  // SEMIBOLD
-  S14,
+  // REGULAR
+  R12,
   // BOLD
-  B14,
-  //Medium
-  M14,
 };

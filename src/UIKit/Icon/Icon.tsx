@@ -1,10 +1,16 @@
-import React from "react";
-import { createIconSetFromIcoMoon } from "react-native-vector-icons";
-import { IconProps } from "react-native-vector-icons/Icon";
+import React from 'react';
+import { createIconSetFromIcoMoon } from 'react-native-vector-icons';
+import { IconProps } from 'react-native-vector-icons/Icon';
 
-import config from "./selection.json";
+import config from './selection.json';
 
-export enum IconNames {}
+export enum IconNames {
+  chats = 'chats',
+  analytics = 'analytics',
+  payments = 'payments',
+  history = 'history',
+  home = 'home',
+}
 
 export const IconSet = createIconSetFromIcoMoon(config);
 

@@ -1,3 +1,1 @@
-import { StatusBar } from "react-native";
-
-export const STATUSBAR_HEIGHT = StatusBar.currentHeight ?? 0;
+export const TAB_BAR_HEIGHT = 85;
