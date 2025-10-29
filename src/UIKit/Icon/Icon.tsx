@@ -10,6 +10,9 @@ export enum IconNames {
   payments = 'payments',
   history = 'history',
   home = 'home',
+  user = 'user',
+  qrCode = 'qrCode',
+  chevronRight = 'chevronRight',
 }
 
 export const IconSet = createIconSetFromIcoMoon(config);

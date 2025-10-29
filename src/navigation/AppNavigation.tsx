@@ -11,7 +11,7 @@ import {
   TAB_BAR_HEIGHT,
   Typography,
 } from '@UIKit';
-import { HomeScreen } from '@screens';
+import { HomeScreen, HomeScreenHeader } from '@screens';
 import { RootTabParamList } from './navigationTypes.ts';
 import { useTranslation } from 'react-i18next';
 
@@ -65,16 +65,18 @@ export const AppNavigation = () => {
           },
           tabBarActiveTintColor: Colors.red,
           tabBarInactiveTintColor: Colors.white,
-          headerShown: false,
         }}
       >
         <Tab.Screen
           name={EScreens.HOME_SCREEN}
           component={HomeScreen}
           options={{
+            title: t('homeScreen:title'),
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:home')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.home, color),
+            header: HomeScreenHeader,
+            headerShown: true,
           }}
         />
         <Tab.Screen
@@ -84,6 +86,7 @@ export const AppNavigation = () => {
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:payments')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.payments, color),
+            headerShown: false,
           }}
         />
         <Tab.Screen
@@ -93,6 +96,7 @@ export const AppNavigation = () => {
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:history')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.history, color),
+            headerShown: false,
           }}
         />
         <Tab.Screen
@@ -102,6 +106,7 @@ export const AppNavigation = () => {
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:analytics')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.analytics, color),
+            headerShown: false,
           }}
         />
         <Tab.Screen
@@ -111,6 +116,7 @@ export const AppNavigation = () => {
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:chats')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.chats, color),
+            headerShown: false,
           }}
         />
       </Tab.Navigator>

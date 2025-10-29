@@ -22,6 +22,10 @@ const regular = styled(coloredText)`
   font-family: 'Inter-Regular';
 `;
 
+const medium = styled(coloredText)`
+  font-family: 'Inter-Bold';
+`;
+
 // const bold = styled(coloredText)`
 //   font-family: 'Inter-Bold';
 // `;
@@ -31,8 +35,14 @@ const R12 = styled(regular)`
   line-height: 16px;
 `;
 
+const M16 = styled(medium)`
+  font-size: 16px;
+  line-height: 16px;
+`;
+
 export const Typography = {
   // REGULAR
   R12,
-  // BOLD
+  // MEDIUM
+  M16,
 };
