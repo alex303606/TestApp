@@ -7,6 +7,19 @@
     "chats": "Chats"
   },
   "homeScreen": {
-    "title": "Charlotte"
+    "title": "Home Screen",
+    "headerTitle": "Charlotte"
+  },
+  "paymentScreen": {
+    "title": "Payments Screen"
+  },
+  "historyScreen": {
+    "title": "History Screen"
+  },
+  "analyticsScreen": {
+    "title": "Analytics Screen"
+  },
+  "chatsScreen": {
+    "title": "Chats Screen"
   }
 }

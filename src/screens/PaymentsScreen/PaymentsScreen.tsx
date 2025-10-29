@@ -2,7 +2,7 @@ import React from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import { useTranslation } from 'react-i18next';
 
-export const HomeScreen: React.FC = () => {
+export const PaymentsScreen: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -15,7 +15,8 @@ export const HomeScreen: React.FC = () => {
       alignItems={'center'}
     >
       <Typography.M16 color={Colors.white}>
-        {t('homeScreen:title')}
+        {' '}
+        {t('paymentScreen:title')}
       </Typography.M16>
     </Block>
   );

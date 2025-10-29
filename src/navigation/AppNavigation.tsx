@@ -11,7 +11,14 @@ import {
   TAB_BAR_HEIGHT,
   Typography,
 } from '@UIKit';
-import { HomeScreen, HomeScreenHeader } from '@screens';
+import {
+  AnalyticsScreen,
+  ChatsScreen,
+  HistoryScreen,
+  HomeScreen,
+  HomeScreenHeader,
+  PaymentsScreen,
+} from '@screens';
 import { RootTabParamList } from './navigationTypes.ts';
 import { useTranslation } from 'react-i18next';
 
@@ -71,7 +78,7 @@ export const AppNavigation = () => {
           name={EScreens.HOME_SCREEN}
           component={HomeScreen}
           options={{
-            title: t('homeScreen:title'),
+            title: t('homeScreen:headerTitle'),
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:home')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.home, color),
@@ -81,7 +88,7 @@ export const AppNavigation = () => {
         />
         <Tab.Screen
           name={EScreens.PAYMENTS_SCREEN}
-          component={HomeScreen}
+          component={PaymentsScreen}
           options={{
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:payments')),
@@ -91,7 +98,7 @@ export const AppNavigation = () => {
         />
         <Tab.Screen
           name={EScreens.HISTORY_SCREEN}
-          component={HomeScreen}
+          component={HistoryScreen}
           options={{
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:history')),
@@ -101,7 +108,7 @@ export const AppNavigation = () => {
         />
         <Tab.Screen
           name={EScreens.ANALYTICS_SCREEN}
-          component={HomeScreen}
+          component={AnalyticsScreen}
           options={{
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:analytics')),
@@ -111,7 +118,7 @@ export const AppNavigation = () => {
         />
         <Tab.Screen
           name={EScreens.CHATS_SCREEN}
-          component={HomeScreen}
+          component={ChatsScreen}
           options={{
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:chats')),
