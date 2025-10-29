@@ -1,6 +1,6 @@
 import { EScreens } from './types.ts';
 
-export type RootTabParamList = {
+export type RootStackParamList = {
   [EScreens.HOME_SCREEN]: undefined;
   [EScreens.PAYMENTS_SCREEN]: undefined;
   [EScreens.HISTORY_SCREEN]: undefined;

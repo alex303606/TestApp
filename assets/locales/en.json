@@ -11,7 +11,8 @@
     "headerTitle": "Charlotte"
   },
   "paymentScreen": {
-    "title": "Payments Screen"
+    "title": "Payments Screen",
+    "headerTitle": "Notifications"
   },
   "historyScreen": {
     "title": "History Screen"

@@ -18,8 +18,9 @@ import {
   HomeScreen,
   HomeScreenHeader,
   PaymentsScreen,
+  PaymentsScreenHeader,
 } from '@screens';
-import { RootTabParamList } from './navigationTypes.ts';
+import { RootStackParamList } from './navigationTypes.ts';
 import { useTranslation } from 'react-i18next';
 
 type LabelProps = {
@@ -28,7 +29,7 @@ type LabelProps = {
   color: string;
 };
 
-const Tab = createBottomTabNavigator<RootTabParamList>();
+const Tab = createBottomTabNavigator<RootStackParamList>();
 
 const Label: React.FC<LabelProps> = ({ focused, title, color }) => {
   if (focused) {
@@ -45,19 +46,32 @@ const tabBarStyle = {
   paddingBottom: ESpacings.s8,
 };
 
-export const AppNavigation = () => {
+export const AppNavigation: React.FC = () => {
   const { t } = useTranslation();
 
   const renderLabel = useCallback(
-    (focused: boolean, color: string, title: string) => {
-      return <Label color={color} focused={focused} title={title} />;
-    },
+    (focused: boolean, color: string, title: string) => (
+      <Label color={color} focused={focused} title={title} />
+    ),
     [],
   );
 
-  const renderIcon = useCallback((icon: IconNames, color: string) => {
-    return <Icon size={ESize.s20} color={color} name={icon} />;
-  }, []);
+  const renderIcon = useCallback(
+    (icon: IconNames, color: string) => (
+      <Icon size={ESize.s20} color={color} name={icon} />
+    ),
+    [],
+  );
+
+  const renderPaymentsScreenHeader = useCallback(
+    () => <PaymentsScreenHeader title={t('paymentScreen:headerTitle')} />,
+    [t],
+  );
+
+  const renderHomeScreenHeader = useCallback(
+    () => <HomeScreenHeader title={t('homeScreen:headerTitle')} />,
+    [t],
+  );
 
   return (
     <>
@@ -68,7 +82,7 @@ export const AppNavigation = () => {
           tabBarHideOnKeyboard: true,
           tabBarStyle: tabBarStyle,
           tabBarItemStyle: {
-            marginBottom: 20,
+            marginBottom: ESize.s20,
           },
           tabBarActiveTintColor: Colors.red,
           tabBarInactiveTintColor: Colors.white,
@@ -78,11 +92,10 @@ export const AppNavigation = () => {
           name={EScreens.HOME_SCREEN}
           component={HomeScreen}
           options={{
-            title: t('homeScreen:headerTitle'),
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:home')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.home, color),
-            header: HomeScreenHeader,
+            header: () => renderHomeScreenHeader(),
             headerShown: true,
           }}
         />
@@ -93,7 +106,8 @@ export const AppNavigation = () => {
             tabBarLabel: ({ focused, color }) =>
               renderLabel(focused, color, t('tabs:payments')),
             tabBarIcon: ({ color }) => renderIcon(IconNames.payments, color),
-            headerShown: false,
+            header: () => renderPaymentsScreenHeader(),
+            headerShown: true,
           }}
         />
         <Tab.Screen

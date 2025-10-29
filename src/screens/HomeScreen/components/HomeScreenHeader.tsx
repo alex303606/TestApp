@@ -12,15 +12,19 @@ import {
 } from '@UIKit';
 import styled from 'styled-components';
 import { Alert, Pressable } from 'react-native';
-import { BottomTabHeaderProps } from '@react-navigation/bottom-tabs';
+import { EScreens, NavigationService } from '@navigation';
 
-export const HomeScreenHeader = (props: BottomTabHeaderProps) => {
+type Props = {
+  title: string;
+};
+
+export const HomeScreenHeader: React.FC<Props> = ({ title }) => {
   const onPressQrCode = useCallback(() => {
     Alert.alert('QR code is available.');
   }, []);
 
   const onPressRight = useCallback(() => {
-    Alert.alert('Your press right');
+    NavigationService.navigate(EScreens.PAYMENTS_SCREEN);
   }, []);
 
   return (
@@ -42,10 +46,10 @@ export const HomeScreenHeader = (props: BottomTabHeaderProps) => {
         </UserIconWrapper>
         <StyledPressable onPress={onPressRight}>
           <Typography.M16 color={Colors.white} marginRight={ESpacings.s8}>
-            {props.options.title || props.route.name}
+            {title}
           </Typography.M16>
           <Icon
-            size={ESize.s12}
+            size={ESize.s16}
             color={Colors.white}
             name={IconNames.chevronRight}
           />

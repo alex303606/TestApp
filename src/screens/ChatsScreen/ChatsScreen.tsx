@@ -1,8 +1,15 @@
 import React from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import { useTranslation } from 'react-i18next';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { EScreens, RootStackParamList } from '@navigation';
 
-export const ChatsScreen: React.FC = () => {
+type ChatsScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  EScreens.CHATS_SCREEN
+>;
+
+export const ChatsScreen: React.FC<ChatsScreenProps> = () => {
   const { t } = useTranslation();
 
   return (
