@@ -3,6 +3,7 @@ import { Block, Colors, ESpacings } from '@UIKit';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { EScreens, RootStackParamList } from '@navigation';
 import { Navigations } from './components/Navigations.tsx';
+import { CreditCards } from './components/CreditCards.tsx';
 
 type HomeScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -18,6 +19,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
       backgroundColor={Colors.black}
     >
       <Navigations />
+      <CreditCards />
     </Block>
   );
 };

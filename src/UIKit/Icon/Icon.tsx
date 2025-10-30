@@ -15,6 +15,7 @@ export enum IconNames {
   chevronRight = 'chevronRight',
   chevronLeft = 'chevronLeft',
   message = 'message',
+  masterCard = 'masterCard',
 }
 
 export const IconSet = createIconSetFromIcoMoon(config);

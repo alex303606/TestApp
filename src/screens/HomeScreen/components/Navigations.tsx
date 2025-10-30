@@ -7,9 +7,9 @@ import {
   SupportImage,
   TravelImage,
 } from '@assets/images';
-import { useTranslation } from 'react-i18next';
+import { NavItemType } from '../types.ts';
 
-const NAVIGATION_ITEMS = [
+const NAVIGATION_ITEMS: NavItemType[] = [
   {
     title: 'travel',
     image: TravelImage,
@@ -29,8 +29,6 @@ const NAVIGATION_ITEMS = [
 ];
 
 export const Navigations = () => {
-  const { t } = useTranslation();
-
   return (
     <Row
       alignItems={'center'}
@@ -38,11 +36,7 @@ export const Navigations = () => {
       marginBottom={ESpacings.s24}
     >
       {NAVIGATION_ITEMS.map(item => (
-        <NavigationItem
-          key={item.title}
-          image={item.image}
-          title={t(`homeScreen:${item.title}`)}
-        />
+        <NavigationItem navItem={item} key={item.title} />
       ))}
     </Row>
   );

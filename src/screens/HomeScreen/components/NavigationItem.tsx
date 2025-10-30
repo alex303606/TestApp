@@ -2,22 +2,25 @@ import React, { useCallback } from 'react';
 import { Colors, ESpacings, Typography } from '@UIKit';
 import styled from 'styled-components';
 import { Alert, Image, Pressable } from 'react-native';
+import { NavItemType } from '../types.ts';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
-  image: number;
-  title: string;
+  navItem: NavItemType;
 };
 
-export const NavigationItem: React.FC<Props> = ({ image, title }) => {
+export const NavigationItem: React.FC<Props> = ({ navItem }) => {
+  const { t } = useTranslation();
+
   const onPressHandler = useCallback(() => {
-    Alert.alert(title);
-  }, [title]);
+    Alert.alert(navItem.title);
+  }, [navItem.title]);
 
   return (
     <StyledPressable onPress={onPressHandler}>
-      <StyledImage source={image} />
+      <StyledImage source={navItem.image} />
       <Typography.M14 marginTop={ESpacings.s8} color={Colors.white}>
-        {title}
+        {t(`homeScreen:${navItem.title}`)}
       </Typography.M14>
     </StyledPressable>
   );
