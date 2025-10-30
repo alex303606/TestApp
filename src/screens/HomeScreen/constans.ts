@@ -50,19 +50,23 @@ export const NAVIGATION_ITEMS: NavItemType[] = [
 
 export const EXPENSES: ExpenseType[] = [
   {
-    percent: 30,
+    percent: 20,
     backgroundColor: '#CC3F02',
   },
   {
-    percent: 20,
+    percent: 25,
     backgroundColor: '#FE5900',
   },
   {
-    percent: 23,
+    percent: 30,
     backgroundColor: '#FF9332',
   },
   {
-    percent: 27,
+    percent: 10,
+    backgroundColor: '#FFD8A5',
+  },
+  {
+    percent: 15,
     backgroundColor: '#FFD8A5',
   },
 ];
