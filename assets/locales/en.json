@@ -8,7 +8,11 @@
   },
   "homeScreen": {
     "title": "Home Screen",
-    "headerTitle": "Charlotte"
+    "headerTitle": "Charlotte",
+    "travel": "Travel",
+    "bonuses": "Bonuses",
+    "delivery": "Delivery",
+    "support": "Support"
   },
   "paymentScreen": {
     "title": "Payments Screen",

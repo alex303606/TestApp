@@ -18,7 +18,8 @@
       "@UIKit": ["src/UIKit/index.ts"],
       "@screens": ["src/screens/index.ts"],
       "@navigation": ["src/navigation/index.ts"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@assets/images": ["assets/images/index.ts"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx"],

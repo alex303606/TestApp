@@ -42,7 +42,7 @@ export const PaymentsScreenHeader: React.FC<Props> = ({ title }) => {
           name={IconNames.chevronLeft}
         />
       </StyledPressable>
-      <Typography.M16 color={Colors.white}>{title}</Typography.M16>
+      <Typography.M21 color={Colors.white}>{title}</Typography.M21>
       <StyledPressableMessage onPress={onPressMessage}>
         <Icon size={ESize.s20} color={Colors.white} name={IconNames.message} />
       </StyledPressableMessage>

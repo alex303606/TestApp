@@ -10,6 +10,7 @@ module.exports = {
           '@screens': './src/screens/index.ts',
           '@navigation': './src/navigation/index.ts',
           '^@assets/(.+)': './assets/\\1',
+          '@assets/images': './assets/images/index.ts',
         },
       },
     ],
