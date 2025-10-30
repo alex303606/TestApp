@@ -4,6 +4,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { EScreens, RootStackParamList } from '@navigation';
 import { Navigations } from './components/Navigations.tsx';
 import { CreditCards } from './components/CreditCards.tsx';
+import { CREDIT_CARDS_ITEMS, NAVIGATION_ITEMS } from './components/constans.ts';
 
 type HomeScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -18,8 +19,8 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
       flex={1}
       backgroundColor={Colors.black}
     >
-      <Navigations />
-      <CreditCards />
+      <Navigations navigationItems={NAVIGATION_ITEMS} />
+      <CreditCards creditCards={CREDIT_CARDS_ITEMS} />
     </Block>
   );
 };
