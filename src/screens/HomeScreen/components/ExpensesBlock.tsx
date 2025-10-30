@@ -31,7 +31,7 @@ export const ExpensesBlock: React.FC<Props> = ({ expenses }) => {
   const { t } = useTranslation();
 
   return (
-    <Block marginBottom={ESpacings.s32}>
+    <Block marginBottom={ESpacings.s8}>
       <Row
         alignItems={'center'}
         justifyContent="space-between"

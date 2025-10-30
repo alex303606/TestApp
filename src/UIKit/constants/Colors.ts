@@ -5,4 +5,5 @@ export const Colors = {
   ripple: '#C0C1C6',
   darkGrey: '#0F0F0F',
   grey: '#AEAEAE',
+  greyLight: '#B3B3B3',
 };

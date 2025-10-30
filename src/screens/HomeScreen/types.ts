@@ -16,3 +16,17 @@ export type ExpenseType = {
   percent: number;
   backgroundColor: string;
 };
+
+export type HistoryItemType = {
+  title: string;
+  id: number;
+  sybTitle: string;
+  price: string;
+  date: string;
+  logo: ImageSourcePropType;
+};
+
+export type HistoryType = {
+  title: string;
+  data: HistoryItemType[];
+};
