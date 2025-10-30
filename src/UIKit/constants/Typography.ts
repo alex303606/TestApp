@@ -40,6 +40,11 @@ const R14 = styled(regular)`
   line-height: 14px;
 `;
 
+const R18 = styled(regular)`
+  font-size: 18px;
+  line-height: 18px;
+`;
+
 const R30 = styled(regular)`
   font-size: 30px;
   line-height: 30px;
@@ -69,6 +74,7 @@ export const Typography = {
   // REGULAR
   R12,
   R14,
+  R18,
   R30,
   // MEDIUM
   M14,

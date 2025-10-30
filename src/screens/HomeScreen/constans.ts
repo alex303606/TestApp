@@ -1,4 +1,4 @@
-import { CreditCardType, NavItemType } from '../types.ts';
+import { CreditCardType, ExpenseType, NavItemType } from './types.ts';
 import {
   BonusesImage,
   DeliveryImage,
@@ -45,5 +45,24 @@ export const NAVIGATION_ITEMS: NavItemType[] = [
   {
     title: 'support',
     image: SupportImage,
+  },
+];
+
+export const EXPENSES: ExpenseType[] = [
+  {
+    percent: 30,
+    backgroundColor: '#CC3F02',
+  },
+  {
+    percent: 20,
+    backgroundColor: '#FE5900',
+  },
+  {
+    percent: 23,
+    backgroundColor: '#FF9332',
+  },
+  {
+    percent: 27,
+    backgroundColor: '#FFD8A5',
   },
 ];

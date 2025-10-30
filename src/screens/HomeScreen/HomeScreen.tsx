@@ -4,7 +4,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { EScreens, RootStackParamList } from '@navigation';
 import { Navigations } from './components/Navigations.tsx';
 import { CreditCards } from './components/CreditCards.tsx';
-import { CREDIT_CARDS_ITEMS, NAVIGATION_ITEMS } from './components/constans.ts';
+import { CREDIT_CARDS_ITEMS, EXPENSES, NAVIGATION_ITEMS } from './constans.ts';
+import { ExpensesBlock } from './components/ExpensesBlock.tsx';
 
 type HomeScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -21,6 +22,7 @@ export const HomeScreen: React.FC<HomeScreenProps> = () => {
     >
       <Navigations navigationItems={NAVIGATION_ITEMS} />
       <CreditCards creditCards={CREDIT_CARDS_ITEMS} />
+      <ExpensesBlock expenses={EXPENSES} />
     </Block>
   );
 };

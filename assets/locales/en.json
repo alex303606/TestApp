@@ -12,7 +12,9 @@
     "travel": "Travel",
     "bonuses": "Bonuses",
     "delivery": "Delivery",
-    "support": "Support"
+    "support": "Support",
+    "expensesIn": "Expenses in",
+    "june": " June"
   },
   "paymentScreen": {
     "title": "Payments Screen",

@@ -11,3 +11,8 @@ export type CreditCardType = {
   number: string;
   background: ImageSourcePropType;
 };
+
+export type ExpenseType = {
+  percent: number;
+  backgroundColor: string;
+};

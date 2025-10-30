@@ -52,6 +52,7 @@ export enum ESize {
 
 export enum ERounding {
   r2 = 2,
+  r3 = 3,
   r4 = 4,
   r6 = 6,
   r8 = 8,
