@@ -32,71 +32,79 @@ export const NotificationCard: React.FC<Props> = React.memo(
 
     return (
       <Block padding={ESpacings.s16} backgroundColor={Colors.black}>
+        <TypographyB12Uppercase
+          color={Colors.grey}
+          marginBottom={ESpacings.s16}
+        >
+          {date}
+        </TypographyB12Uppercase>
         {/*Receive block*/}
-        <Block>
-          <TypographyB12Uppercase
-            color={Colors.grey}
-            marginBottom={ESpacings.s16}
-          >
-            {date}
-          </TypographyB12Uppercase>
-          <Row alignItems="flex-start">
-            <StyledImage source={receivedImage} />
-            <Block flex={1}>
-              <Row
-                flex={1}
-                alignItems="center"
-                justifyContent="space-between"
-                marginBottom={ESpacings.s6}
-              >
-                <Typography.M14 color={Colors.white}>
-                  {receivedTitle}
-                </Typography.M14>
-                {isOnline ? (
-                  <Typography.B18 color={Colors.red} marginLeft={ESpacings.s16}>
-                    •
-                  </Typography.B18>
+        {receivedTitle && receivedImage ? (
+          <Block>
+            <Row alignItems="flex-start">
+              <StyledImage source={receivedImage} />
+              <Block flex={1}>
+                <Row
+                  flex={1}
+                  alignItems="center"
+                  justifyContent="space-between"
+                  marginBottom={ESpacings.s6}
+                >
+                  <Typography.M14 color={Colors.white}>
+                    {receivedTitle}
+                  </Typography.M14>
+                  {isOnline ? (
+                    <Typography.B18
+                      color={Colors.red}
+                      marginLeft={ESpacings.s16}
+                    >
+                      •
+                    </Typography.B18>
+                  ) : null}
+                </Row>
+                {subTitle ? (
+                  <TypographyR14WithLineHeight
+                    color={Colors.grey}
+                    marginBottom={ESpacings.s6}
+                  >
+                    {subTitle}
+                  </TypographyR14WithLineHeight>
                 ) : null}
-              </Row>
-              {subTitle ? (
-                <TypographyR14WithLineHeight
-                  color={Colors.grey}
-                  marginBottom={ESpacings.s6}
-                >
-                  {subTitle}
-                </TypographyR14WithLineHeight>
-              ) : null}
-              {receivedSum ? (
-                <Typography.B21 color={Colors.red} marginBottom={ESpacings.s6}>
-                  {receivedSum}
-                </Typography.B21>
-              ) : null}
-              {receivedCard ? (
-                <TypographyR14WithLineHeight
-                  color={Colors.grey}
-                  marginBottom={ESpacings.s4}
-                >
-                  {receivedCard}
-                </TypographyR14WithLineHeight>
-              ) : null}
-              {receivedTotalSum ? (
-                <TypographyR14WithLineHeight
-                  color={Colors.grey}
-                  marginBottom={ESpacings.s6}
-                >
-                  {receivedTotalSum}
-                </TypographyR14WithLineHeight>
-              ) : null}
-              {receivedDate && receivedType ? (
-                <Typography.R12 color={'#616161'}>
-                  {receivedDate} · {receivedType}
-                </Typography.R12>
-              ) : null}
-            </Block>
-          </Row>
-        </Block>
+                {receivedSum ? (
+                  <Typography.B21
+                    color={Colors.red}
+                    marginBottom={ESpacings.s6}
+                  >
+                    {receivedSum}
+                  </Typography.B21>
+                ) : null}
+                {receivedCard ? (
+                  <TypographyR14WithLineHeight
+                    color={Colors.grey}
+                    marginBottom={ESpacings.s4}
+                  >
+                    {receivedCard}
+                  </TypographyR14WithLineHeight>
+                ) : null}
+                {receivedTotalSum ? (
+                  <TypographyR14WithLineHeight
+                    color={Colors.grey}
+                    marginBottom={ESpacings.s6}
+                  >
+                    {receivedTotalSum}
+                  </TypographyR14WithLineHeight>
+                ) : null}
+                {receivedDate && receivedType ? (
+                  <Typography.R12 color={'#616161'}>
+                    {receivedDate} · {receivedType}
+                  </Typography.R12>
+                ) : null}
+              </Block>
+            </Row>
+          </Block>
+        ) : null}
         {/*Sent block*/}
-        {sentImage ? (
+        {sentImage && sentTitle ? (
           <Block marginTop={ESpacings.s16}>
             <Row alignItems="flex-start">
               <StyledImage source={sentImage} />

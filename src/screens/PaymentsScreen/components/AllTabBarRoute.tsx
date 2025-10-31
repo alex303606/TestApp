@@ -1,24 +1,40 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Block, Colors, ESpacings, Typography } from '@UIKit';
+import React, { useCallback } from 'react';
+import { Block, Colors, Row } from '@UIKit';
+import { FlatList, ListRenderItemInfo } from 'react-native';
+import { NOTIFICATIONS } from '../constans.ts';
+import { NotificationCard } from './NotificationCard.tsx';
+import { FlatListType, NotificationType } from '../types.ts';
+import styled from 'styled-components';
 
-type Props = {
-  title: string;
-};
+const keyExtractor = (item: NotificationType) => item.id.toString();
 
-export const AllTabBarRoute: React.FC<Props> = ({ title }) => {
-  const { t } = useTranslation();
+export const AllTabBarRoute: React.FC = () => {
+  const renderItem = useCallback(
+    ({ item }: ListRenderItemInfo<NotificationType>) => (
+      <NotificationCard notification={item} />
+    ),
+    [],
+  );
 
   return (
-    <Block
-      flex={1}
-      padding={ESpacings.s16}
-      justifyContent={'center'}
-      alignItems={'center'}
-    >
-      <Typography.M16 color={Colors.white}>
-        {t(`paymentScreen:${title}`)} Screen
-      </Typography.M16>
+    <Block flex={1} backgroundColor={Colors.black}>
+      <NotificationsList
+        keyExtractor={keyExtractor}
+        renderItem={renderItem}
+        data={NOTIFICATIONS}
+        ItemSeparatorComponent={Separator}
+      />
     </Block>
   );
 };
+
+const Separator = styled(Row)({
+  height: 1,
+  backgroundColor: '#1F1F1F',
+});
+
+const NotificationsList: FlatListType = styled(FlatList).attrs(() => ({
+  contentContainerStyle: {
+    flexGrow: 1,
+  },
+}))({});
