@@ -17,7 +17,7 @@ export const AllTabBarRoute: React.FC<Props> = ({ title }) => {
       alignItems={'center'}
     >
       <Typography.M16 color={Colors.white}>
-        {t(`paymentScreen:${title}`)}
+        {t(`paymentScreen:${title}`)} Screen
       </Typography.M16>
     </Block>
   );

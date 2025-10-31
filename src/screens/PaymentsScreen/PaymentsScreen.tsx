@@ -13,6 +13,7 @@ import { useWindowDimensions } from 'react-native';
 import { CustomTabBar } from './components/CustomTabBar.tsx';
 import { EmptyTabBarRoute } from './components/EmptyTabBarRoute.tsx';
 import { AllTabBarRoute } from './components/AllTabBarRoute.tsx';
+import { useTranslation } from 'react-i18next';
 
 type PaymentsScreenProps = NativeStackScreenProps<
   RootStackParamList,
@@ -28,14 +29,15 @@ const renderScene = SceneMap({
 });
 
 export const PaymentsScreen: React.FC<PaymentsScreenProps> = () => {
+  const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const layout = useWindowDimensions();
   const [routes] = useState([
-    { key: 'first', title: 'All' },
-    { key: 'second', title: 'Payments' },
-    { key: 'third', title: 'System' },
-    { key: 'four', title: 'Delivery' },
-    { key: 'five', title: 'Travel' },
+    { key: 'first', title: t('paymentScreen:all') },
+    { key: 'second', title: t('paymentScreen:payments') },
+    { key: 'third', title: t('paymentScreen:system') },
+    { key: 'four', title: t('paymentScreen:delivery') },
+    { key: 'five', title: t('paymentScreen:travel') },
   ]);
 
   const renderTabBar = useCallback(
