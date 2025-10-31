@@ -11,6 +11,11 @@ type Props = {
   history: HistoryType[];
 };
 
+const contentContainerStyle = {
+  flexGrow: 1,
+  paddingHorizontal: ESpacings.s16,
+};
+
 export const History: FC<Props> = ({ history }) => {
   const renderItem = useCallback(
     ({ item }: { item: HistoryItemType }) => <HistoryItem item={item} />,
@@ -30,6 +35,7 @@ export const History: FC<Props> = ({ history }) => {
 
   return (
     <SectionList
+      contentContainerStyle={contentContainerStyle}
       showsVerticalScrollIndicator={false}
       stickySectionHeadersEnabled={false}
       sections={history}

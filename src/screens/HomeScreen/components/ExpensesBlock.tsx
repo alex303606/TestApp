@@ -31,7 +31,7 @@ export const ExpensesBlock: FC<Props> = ({ expenses }) => {
   const { t } = useTranslation();
 
   return (
-    <Block marginBottom={ESpacings.s8}>
+    <Block marginBottom={ESpacings.s8} paddingHorizontal={ESpacings.s16}>
       <Row
         alignItems={'center'}
         justifyContent="space-between"

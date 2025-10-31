@@ -13,6 +13,7 @@ export const Navigations: FC<Props> = ({ navigationItems }) => {
       alignItems={'center'}
       justifyContent="space-between"
       marginBottom={ESpacings.s24}
+      paddingHorizontal={ESpacings.s16}
     >
       {navigationItems.map(item => (
         <NavigationItem navItem={item} key={item.title} />

@@ -9,6 +9,10 @@ type Props = {
   creditCards: CreditCardType[];
 };
 
+const contentContainerStyle = {
+  paddingHorizontal: ESpacings.s16,
+};
+
 export const CreditCards: FC<Props> = ({ creditCards }) => {
   const onPressAddCard = useCallback(() => {
     Alert.alert('Add card to the credit card');
@@ -16,7 +20,11 @@ export const CreditCards: FC<Props> = ({ creditCards }) => {
 
   return (
     <Block marginBottom={ESpacings.s24}>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={contentContainerStyle}
+      >
         {creditCards.map(item => (
           <CreditCardItem card={item} key={item.number} />
         ))}

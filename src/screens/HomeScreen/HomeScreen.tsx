@@ -21,7 +21,7 @@ type HomeScreenProps = NativeStackScreenProps<
 export const HomeScreen: FC<HomeScreenProps> = () => {
   return (
     <Block
-      padding={ESpacings.s16}
+      paddingVertical={ESpacings.s16}
       paddingTop={ESpacings.s24}
       flex={1}
       backgroundColor={Colors.black}
