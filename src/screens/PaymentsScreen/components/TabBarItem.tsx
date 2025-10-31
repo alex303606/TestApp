@@ -2,27 +2,30 @@ import React, { useCallback } from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import styled from 'styled-components';
 import { Pressable } from 'react-native';
-import { NavigationItemType } from '../types.ts';
 
-type NavigationItemProps = {
-  item: NavigationItemType;
+type TabBarItemProps = {
+  title: string;
   isActive: boolean;
-  setActiveId: (id: number) => void;
+  index: number;
+  onPressItem: (index: number) => void;
 };
 
-export const NavigationItem: React.FC<NavigationItemProps> = ({
-  item,
+export const TabBarItem: React.FC<TabBarItemProps> = ({
+  title,
+  onPressItem,
   isActive,
-  setActiveId,
+  index,
 }) => {
   const onPressHandler = useCallback(() => {
-    setActiveId(item.id);
-  }, [item.id, setActiveId]);
+    onPressItem(index);
+  }, [index, onPressItem]);
 
   return (
     <Wrapper isActive={isActive}>
       <StyledPressable onPress={onPressHandler}>
-        <Typography.R14 color={Colors.white}>{item.title}</Typography.R14>
+        <Typography.R14 color={isActive ? Colors.red : Colors.white}>
+          {title}
+        </Typography.R14>
       </StyledPressable>
     </Wrapper>
   );

@@ -18,7 +18,12 @@
   },
   "paymentScreen": {
     "title": "Payments Screen",
-    "headerTitle": "Notifications"
+    "headerTitle": "Notifications",
+    "all": "All screen",
+    "payments": "Payments screen",
+    "system": "System screen",
+    "delivery": "Delivery screen",
+    "travel": "Travel screen"
   },
   "historyScreen": {
     "title": "History Screen"
