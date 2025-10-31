@@ -9,7 +9,10 @@
     "start": "react-native start",
     "test": "jest",
     "tsc": "tsc --noEmit",
-    "clean": "cd android && ./gradlew clean && cd ../"
+    "clean": "cd android && ./gradlew clean && cd ../",
+    "androidBundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "androidReleaseBuild": "cd android && ./gradlew clean && ./gradlew :app:bundleRelease",
+    "androidApkBuild": "cd android && ./gradlew clean && ./gradlew :app:assembleRelease"
   },
   "dependencies": {
     "@react-native/new-app-screen": "0.82.1",
