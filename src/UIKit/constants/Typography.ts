@@ -65,9 +65,19 @@ const M21 = styled(medium)`
   line-height: 21px;
 `;
 
+const B12 = styled(bold)`
+  font-size: 12px;
+  line-height: 12px;
+`;
+
 const B18 = styled(bold)`
   font-size: 18px;
   line-height: 18px;
+`;
+
+const B21 = styled(bold)`
+  font-size: 21px;
+  line-height: 21px;
 `;
 
 export const Typography = {
@@ -81,5 +91,7 @@ export const Typography = {
   M16,
   M21,
   //BOLD
+  B12,
   B18,
+  B21,
 };

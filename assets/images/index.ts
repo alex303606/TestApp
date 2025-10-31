@@ -8,3 +8,7 @@ export const OrangeCardBackground = require('./orangeCardBackground.webp');
 export const AvatarImage = require('./avatar.webp');
 export const StarbucksImage = require('./starbucks.webp');
 export const NetflixImage = require('./netflix.webp');
+export const AnnaImage = require('./anna.webp');
+export const ShieldImage = require('./shield.webp');
+export const TransferImage = require('./transfer.webp');
+export const EarthImage = require('./earth.webp');

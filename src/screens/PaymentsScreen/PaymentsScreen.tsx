@@ -21,7 +21,7 @@ type PaymentsScreenProps = NativeStackScreenProps<
 >;
 
 const renderScene = SceneMap({
-  first: () => <AllTabBarRoute title={'all'} />,
+  first: () => <AllTabBarRoute />,
   second: () => <EmptyTabBarRoute title={'payments'} />,
   third: () => <EmptyTabBarRoute title={'system'} />,
   four: () => <EmptyTabBarRoute title={'delivery'} />,

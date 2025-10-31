@@ -15,6 +15,7 @@ export const EmptyTabBarRoute: React.FC<Props> = ({ title }) => {
       padding={ESpacings.s16}
       justifyContent={'center'}
       alignItems={'center'}
+      backgroundColor={Colors.black}
     >
       <Typography.M16 color={Colors.white}>
         {t(`paymentScreen:${title}`)} Screen

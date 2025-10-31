@@ -64,7 +64,7 @@ export const HomeScreenHeader: React.FC<Props> = ({ title }) => {
 
 const UserIconWrapper = styled(Block)({
   borderRadius: ERounding.r100,
-  backgroundColor: '#0F0F0F',
+  backgroundColor: Colors.blackLight,
 });
 
 const StyledPressableQrCode = styled(Pressable).attrs(() => ({
