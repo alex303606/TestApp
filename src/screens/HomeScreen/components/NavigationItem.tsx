@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { Colors, ESpacings, Typography } from '@UIKit';
 import styled from 'styled-components';
 import { Alert, Image, Pressable } from 'react-native';
@@ -9,7 +9,7 @@ type Props = {
   navItem: NavItemType;
 };
 
-export const NavigationItem: React.FC<Props> = ({ navItem }) => {
+export const NavigationItem: FC<Props> = ({ navItem }) => {
   const { t } = useTranslation();
 
   const onPressHandler = useCallback(() => {

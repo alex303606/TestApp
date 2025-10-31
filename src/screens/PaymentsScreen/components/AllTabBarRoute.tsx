@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { Block, Colors, Row } from '@UIKit';
 import { FlatList, ListRenderItemInfo } from 'react-native';
 import { NOTIFICATIONS } from '../constans.ts';
@@ -8,7 +8,7 @@ import styled from 'styled-components';
 
 const keyExtractor = (item: NotificationType) => item.id.toString();
 
-export const AllTabBarRoute: React.FC = () => {
+export const AllTabBarRoute: FC = () => {
   const renderItem = useCallback(
     ({ item }: ListRenderItemInfo<NotificationType>) => (
       <NotificationCard notification={item} />

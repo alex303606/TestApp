@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import { useTranslation } from 'react-i18next';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -9,7 +9,7 @@ type AnalyticsScreenProps = NativeStackScreenProps<
   EScreens.ANALYTICS_SCREEN
 >;
 
-export const AnalyticsScreen: React.FC<AnalyticsScreenProps> = () => {
+export const AnalyticsScreen: FC<AnalyticsScreenProps> = () => {
   const { t } = useTranslation();
 
   return (

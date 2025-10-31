@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import styled from 'styled-components';
 import {
   Block,
@@ -18,7 +18,7 @@ type Props = {
   card: CreditCardType;
 };
 
-export const CreditCardItem: React.FC<Props> = ({ card }) => {
+export const CreditCardItem: FC<Props> = ({ card }) => {
   const onPressCard = useCallback(() => {
     Alert.alert(`Card number ${card.number}`);
   }, [card.number]);

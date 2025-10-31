@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { SectionList } from 'react-native';
 import { Colors, ESpacings, Row, Typography } from '@UIKit';
 import styled from 'styled-components';
@@ -11,7 +11,7 @@ type Props = {
   history: HistoryType[];
 };
 
-export const History: React.FC<Props> = ({ history }) => {
+export const History: FC<Props> = ({ history }) => {
   const renderItem = useCallback(
     ({ item }: { item: HistoryItemType }) => <HistoryItem item={item} />,
     [],

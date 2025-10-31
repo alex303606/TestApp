@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import {
   Block,
   Colors,
@@ -27,7 +27,7 @@ const calculateWidth = (expenses: ExpenseType[]) => {
   }));
 };
 
-export const ExpensesBlock: React.FC<Props> = ({ expenses }) => {
+export const ExpensesBlock: FC<Props> = ({ expenses }) => {
   const { t } = useTranslation();
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { NavigationState } from 'react-native-tab-view';
 import { ESpacings, Row } from '@UIKit';
 import { TabBarItem } from './TabBarItem.tsx';
@@ -9,10 +9,7 @@ type Props = {
   onIndexChange: (index: number) => void;
 };
 
-export const CustomTabBar: React.FC<Props> = ({
-  navigationState,
-  onIndexChange,
-}) => {
+export const CustomTabBar: FC<Props> = ({ navigationState, onIndexChange }) => {
   return (
     <StyledTabBar>
       <Row

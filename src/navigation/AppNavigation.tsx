@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { EScreens } from './types.ts';
 import {
@@ -31,7 +31,7 @@ type LabelProps = {
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
-const Label: React.FC<LabelProps> = ({ focused, title, color }) => {
+const Label: FC<LabelProps> = ({ focused, title, color }) => {
   if (focused) {
     return <Typography.R12 color={color}>{title}</Typography.R12>;
   }
@@ -46,7 +46,7 @@ const tabBarStyle = {
   paddingBottom: ESpacings.s8,
 };
 
-export const AppNavigation: React.FC = () => {
+export const AppNavigation: FC = () => {
   const { t } = useTranslation();
 
   const renderLabel = useCallback(

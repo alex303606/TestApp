@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import {
   Block,
   Colors,
@@ -18,7 +18,7 @@ type Props = {
   title: string;
 };
 
-export const HomeScreenHeader: React.FC<Props> = ({ title }) => {
+export const HomeScreenHeader: FC<Props> = ({ title }) => {
   const onPressQrCode = useCallback(() => {
     Alert.alert('QR code is available.');
   }, []);

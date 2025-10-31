@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { Block, Colors, ESpacings } from '@UIKit';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { EScreens, RootStackParamList } from '@navigation';
@@ -28,7 +28,7 @@ const renderScene = SceneMap({
   five: () => <EmptyTabBarRoute title={'travel'} />,
 });
 
-export const PaymentsScreen: React.FC<PaymentsScreenProps> = () => {
+export const PaymentsScreen: FC<PaymentsScreenProps> = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const layout = useWindowDimensions();

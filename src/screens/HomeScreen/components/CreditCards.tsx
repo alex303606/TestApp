@@ -1,7 +1,7 @@
 import { Alert, Pressable, ScrollView } from 'react-native';
 import { Block, Colors, ERounding, ESpacings, Typography } from '@UIKit';
 import styled from 'styled-components';
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { CreditCardItem } from './CreditCardItem.tsx';
 import { CreditCardType } from '../types.ts';
 
@@ -9,7 +9,7 @@ type Props = {
   creditCards: CreditCardType[];
 };
 
-export const CreditCards: React.FC<Props> = ({ creditCards }) => {
+export const CreditCards: FC<Props> = ({ creditCards }) => {
   const onPressAddCard = useCallback(() => {
     Alert.alert('Add card to the credit card');
   }, []);

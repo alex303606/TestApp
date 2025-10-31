@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import {
   Colors,
   ESize,
@@ -16,7 +16,7 @@ type Props = {
   title: string;
 };
 
-export const PaymentsScreenHeader: React.FC<Props> = ({ title }) => {
+export const PaymentsScreenHeader: FC<Props> = ({ title }) => {
   const navigation = useNavigation();
 
   const onPressLeft = useCallback(() => {

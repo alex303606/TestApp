@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import { useTranslation } from 'react-i18next';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
@@ -9,7 +9,7 @@ type HistoryScreenProps = NativeStackScreenProps<
   EScreens.HISTORY_SCREEN
 >;
 
-export const HistoryScreen: React.FC<HistoryScreenProps> = () => {
+export const HistoryScreen: FC<HistoryScreenProps> = () => {
   const { t } = useTranslation();
 
   return (

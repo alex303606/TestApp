@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import { FC, useCallback } from 'react';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 import styled from 'styled-components';
 import { Pressable } from 'react-native';
@@ -10,7 +10,7 @@ type TabBarItemProps = {
   onPressItem: (index: number) => void;
 };
 
-export const TabBarItem: React.FC<TabBarItemProps> = ({
+export const TabBarItem: FC<TabBarItemProps> = ({
   title,
   onPressItem,
   isActive,

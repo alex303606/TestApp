@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Block, Colors, ESpacings, Typography } from '@UIKit';
 
@@ -6,7 +6,7 @@ type Props = {
   title: string;
 };
 
-export const EmptyTabBarRoute: React.FC<Props> = ({ title }) => {
+export const EmptyTabBarRoute: FC<Props> = ({ title }) => {
   const { t } = useTranslation();
 
   return (

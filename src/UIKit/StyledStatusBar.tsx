@@ -1,4 +1,3 @@
-import React from 'react';
 import { Platform, StatusBar } from 'react-native';
 import { Colors } from './constants';
 import { Block } from './helpers';

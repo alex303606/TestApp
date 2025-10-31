@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { Block, Colors, ESpacings } from '@UIKit';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { EScreens, RootStackParamList } from '@navigation';
@@ -18,7 +18,7 @@ type HomeScreenProps = NativeStackScreenProps<
   EScreens.HOME_SCREEN
 >;
 
-export const HomeScreen: React.FC<HomeScreenProps> = () => {
+export const HomeScreen: FC<HomeScreenProps> = () => {
   return (
     <Block
       padding={ESpacings.s16}
