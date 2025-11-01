@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react';
+import { FC, memo, useCallback } from 'react';
 import { Block, Colors, ERounding, ESpacings, Row, Typography } from '@UIKit';
 import { HistoryItemType } from '../types.ts';
 import styled from 'styled-components';
@@ -8,7 +8,7 @@ type Props = {
   item: HistoryItemType;
 };
 
-export const HistoryItem: FC<Props> = ({ item }) => {
+export const HistoryItem: FC<Props> = memo(({ item }) => {
   const onPressHandler = useCallback(() => {
     Alert.alert(item.title);
   }, [item.title]);
@@ -35,7 +35,7 @@ export const HistoryItem: FC<Props> = ({ item }) => {
       </Block>
     </Wrapper>
   );
-};
+});
 
 const Wrapper = styled(Pressable).attrs(() => ({
   android_ripple: {
